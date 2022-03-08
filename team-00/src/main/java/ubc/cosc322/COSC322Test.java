@@ -239,7 +239,19 @@ public class COSC322Test extends GamePlayer{
 
 		
 	}
-	
+	public double value(int[][] board) {
+		double sum =0;
+		for(int i=0; i< board.length; i++) {
+			for(int j =0; j< board[i].length; j++) {
+				if(board[i][j] == 1) {
+					sum +=1;
+				} else if (board[i][j] ==2) {
+					sum -=1;
+				}
+			}
+		}
+		return sum;
+	}
 	
 	public ArrayList<int[]> WhiteQueenLocations(int[][] board) {
 		ArrayList<int[]> WhiteQueensLocations = new ArrayList<>(4);
